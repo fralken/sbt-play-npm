@@ -3,7 +3,7 @@
 Integrate a Npm application with Play (version 2.6).
 
 A typical use case is to have a single page application (e.g. implemented with React) that calls a set of Rest api implemented in Play.
-During development you set up a npm project for tha SPA, and a Play project for the Rest api, being careful to proxy the Play server behind the Node server to avoid any CORS issue.
+During development you set up a Npm project for tha SPA, and a Play project for the Rest api, being careful to proxy the Play server behind the Node server to avoid any CORS issue.
 
 At runtime the SPA is served by an http server (e.g. Nginx) which again should proxy the Play server for the same reason.
 
@@ -84,7 +84,7 @@ class WebRouter @Inject()(assets: Assets) extends SimpleRouter
 }
 ```
 
-This defines three routes as explained above, where static assets are recognized with a regular expressions that matches strings containing one or more ".". This can ba change e.g. by specifying a static path if you are sure static assets are served at that path. 
+This defines three routes as explained above, where static assets are recognized with a regular expression that matches strings containing one or more ".". This can be changed e.g. by specifying a static path if you are sure static assets are served at that path.
 
 Then you have to activate these routes by adding in your `routes` file, as the last route:
 
