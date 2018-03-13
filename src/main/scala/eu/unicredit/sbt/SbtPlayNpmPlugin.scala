@@ -31,17 +31,17 @@ object SbtPlayNpmPlugin extends AutoPlugin {
   override def requires: Plugins = Play
 
   object autoImport {
-    lazy val npmDependenciesInstall = SettingKey[String]("Command to install dependencies")
-    lazy val npmTest = SettingKey[String]("Command to run tests")
-    lazy val npmServe = SettingKey[String]("Command to start the application")
-    lazy val npmBuild = SettingKey[String]("Command to build the application")
-    lazy val npmEnvOption = SettingKey[Option[String]]("Environment option to add to the command")
-    lazy val npmSrcDir = SettingKey[String]("Folder name of the application source files")
-    lazy val npmModulesDir = SettingKey[String]("Folder name of the dependency modules")
-    lazy val npmBuildDir = SettingKey[String]("Folder name of the generated build files")
-    lazy val npmTestTask = TaskKey[Unit]("Task to run tests")
-    lazy val npmBuildTask = TaskKey[Unit]("Task to build the application")
-    lazy val npmCleanTask = TaskKey[Unit]("Task to clean the build folder")
+    lazy val npmDependenciesInstall = settingKey[String]("Command to install dependencies")
+    lazy val npmTest = settingKey[String]("Command to run tests")
+    lazy val npmServe = settingKey[String]("Command to start the application")
+    lazy val npmBuild = settingKey[String]("Command to build the application")
+    lazy val npmEnvOption = settingKey[Option[String]]("Environment option to add to the command")
+    lazy val npmSrcDir = settingKey[String]("Folder name of the application source files")
+    lazy val npmModulesDir = settingKey[String]("Folder name of the dependency modules")
+    lazy val npmBuildDir = settingKey[String]("Folder name of the generated build files")
+    lazy val npmTestTask = taskKey[Unit]("Task to run tests")
+    lazy val npmBuildTask = taskKey[Unit]("Task to build the application")
+    lazy val npmCleanTask = taskKey[Unit]("Task to clean the build folder")
   }
 
   import autoImport._
