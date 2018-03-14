@@ -1,0 +1,10 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a simple messgae
+GET     /api/greetings                           controllers.HomeController.greetings
+
+# Serve spa routes and static resources
+->    /       routers.SpaRouter

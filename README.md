@@ -36,6 +36,8 @@ This cross-publishes for both sbt 0.13 and 1.0.
 
 ## Usage
 
+You can see an example of a very simple application using this plugin in the `example` folder.
+
 Add the plugin to your project by adding this line in `project/project.sbt`
 
 ```
@@ -116,3 +118,8 @@ The following tasks are available:
 - `npmTestTask`: task to run tests. This is automatically executed before the `test` task
 - `npmBuildTask`: task to build the application. This is automatically executed before the `dist` and `stage` tasks
 - `npmCleanTask`: task to clean the build folder. This is automatically executed before the `clean` task
+
+## Known issues
+
+When running `sbt run`, pressing ctrl-D to stop the server may not stop the Node server completely. In this case you have to kill the Node process manually.
+As a workaround you can press ctrl-C instead, which exits sbt completely.
