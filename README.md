@@ -122,4 +122,28 @@ The following tasks are available:
 ## Known issues
 
 When running `sbt run`, pressing ctrl-D to stop the server may not stop the Node server completely. In this case you have to kill the Node process manually.
-As a workaround you can press ctrl-C instead, which exits sbt completely.
+As a workaround you can press ctrl-C instead, which exits sbt completely. Alternatively, yuo can change the start command in `package.json`.
+
+For example, if you created a React application with `create-react-app` (like in `example` project), in `package.json` you'll probably have script definitions like so:
+
+```
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+```
+
+`react-scripts start` actually starts another process `node node_modules/react-scripts/scripts/start.js`, so you can replace the command with this one:
+
+```
+  "scripts": {
+    "start": "node node_modules/react-scripts/scripts/start.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+```
+
+Now the Node process is created directly (and not as a subprocess), so pressing ctrl-D it is possible to terminate it.
