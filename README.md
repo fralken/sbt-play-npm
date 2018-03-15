@@ -22,25 +22,15 @@ This is not a big deal, but it would be nice to:
 
 This plugin helps implement this easily.
 
-## Install
-
-Clone this project and publish the package locally
-
-```
-git clone https://github.com/unicredit/sbt-play-npm.git
-cd sbt-play-npm
-sbt ^publishLocal
-```
-
-This cross-publishes for both sbt 0.13 and 1.0.
-
 ## Usage
 
 You can see an example of a very simple application using this plugin in the `example` folder.
 
-Add the plugin to your project by adding this line in `project/project.sbt`
+Add the plugin to your project by adding these lines in `project/project.sbt`
 
 ```
+resolvers += Resolver.sonatypeRepo("snapshots")
+
 addSbtPlugin("eu.unicredit" % "sbt-play-npm" % "0.1-SNAPSHOT")
 ```
 
