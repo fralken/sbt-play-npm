@@ -29,9 +29,9 @@ You can see an example of a very simple application using this plugin in the `ex
 Add the plugin to your project by adding these lines in `project/project.sbt`
 
 ```
-resolvers += Resolver.sonatypeRepo("snapshots")
+resolvers += Resolver.sonatypeRepo("releases")
 
-addSbtPlugin("eu.unicredit" % "sbt-play-npm" % "0.1-SNAPSHOT")
+addSbtPlugin("eu.unicredit" % "sbt-play-npm" % "0.1")
 ```
 
 Place your npm project in a folder named `web` (by default, this can be changed)

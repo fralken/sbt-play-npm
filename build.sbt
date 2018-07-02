@@ -5,7 +5,7 @@ lazy val root = project.in(file("."))
     Seq(
       name := """sbt-play-npm""",
       organization := "eu.unicredit",
-      version := "0.1-SNAPSHOT",
+      version := "0.1",
       crossSbtVersions := Seq("0.13.17", "1.1.0"),
       sbtPlugin := true,
       addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.9")

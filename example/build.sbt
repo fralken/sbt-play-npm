@@ -1,7 +1,7 @@
 name := """example"""
 organization := "com.example"
 
-version := "1.0-SNAPSHOT"
+version := "1.0"
 
 lazy val root = (project in file("."))
   .settings(Seq(npmSrcDir := "spa"))
