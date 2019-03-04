@@ -4,9 +4,13 @@
 target
 project/project
 project/target
+project/.bloop
 .cache
 .classpath
 .project
 .settings
 .idea
+.bloop
+.metals
 bin
+

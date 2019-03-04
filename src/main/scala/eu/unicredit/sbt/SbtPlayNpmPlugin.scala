@@ -19,7 +19,7 @@ import java.net.InetSocketAddress
 import com.typesafe.sbt.packager.universal.UniversalPlugin.autoImport._
 import com.typesafe.sbt.web.Import.Assets
 import play.sbt.PlayImport.PlayKeys._
-import play.sbt.{Play, PlayRunHook}
+import play.sbt.{PlayWeb, PlayRunHook}
 import sbt.Keys._
 import sbt._
 
@@ -28,7 +28,7 @@ import scala.sys.process.Process
 object SbtPlayNpmPlugin extends AutoPlugin {
 
   override def trigger: PluginTrigger = allRequirements
-  override def requires: Plugins = Play
+  override def requires: Plugins = PlayWeb
 
   object autoImport {
     lazy val npmDependenciesInstall = settingKey[String]("Command to install dependencies")
@@ -105,7 +105,7 @@ object SbtPlayNpmPlugin extends AutoPlugin {
         * Executed after play run start.
         * Run npm start
         */
-      override def afterStarted(addr: InetSocketAddress): Unit = {
+      override def afterStarted(): Unit = {
         process = Option(Process(command(serve), dir).run)
       }
 

@@ -8,7 +8,7 @@ lazy val root = project.in(file("."))
       version := "0.1",
       crossSbtVersions := Seq("0.13.17", "1.1.0"),
       sbtPlugin := true,
-      addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.9")
+      addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.7.0")
     ) ++ sonatypePublish
   )
 
