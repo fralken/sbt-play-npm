@@ -14,8 +14,6 @@
  */
 package eu.unicredit.sbt
 
-import java.net.InetSocketAddress
-
 import com.typesafe.sbt.packager.universal.UniversalPlugin.autoImport._
 import com.typesafe.sbt.web.Import.Assets
 import play.sbt.PlayImport.PlayKeys._
@@ -89,7 +87,7 @@ object SbtPlayNpmPlugin extends AutoPlugin {
     Process(command(script, option), dir).! == 0
 
   // Run serve task when Play runs in dev mode, that is, when using 'sbt run'
-  // https://www.playframework.com/documentation/2.6.x/SBTCookbook
+  // https://www.playframework.com/documentation/2.7.x/SBTCookbook
   def npmRunHook(serve: String, install: String, dir: File): PlayRunHook = {
     object NpmRunHook extends PlayRunHook {
 
