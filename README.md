@@ -1,6 +1,6 @@
 # sbt-play-npm
 
-Integrate a Npm application with Play (version 2.6).
+Integrate a Npm application with Play (version 2.6 or 2.7).
 
 A typical use case is to have a single page application (e.g. implemented with React) that calls a set of Rest api implemented in Play.
 During development you set up a Npm project for tha SPA, and a Play project for the Rest api, being careful to proxy the Play server behind the Node server to avoid any CORS issue.
@@ -31,8 +31,15 @@ Add the plugin to your project by adding these lines in `project/project.sbt`
 ```
 resolvers += Resolver.sonatypeRepo("releases")
 
-addSbtPlugin("eu.unicredit" % "sbt-play-npm" % "0.1")
+addSbtPlugin("eu.unicredit" % "sbt-play-npm" % VERSION)
 ```
+
+where VERSION is:
+
+| VERSION | Play | sbt          |
+|:-------:|:----:|:------------:|
+| 0.1     | 2.6  | 0.13.x / 1.x |
+| 0.2     | 2.7  | 1.x          |
 
 Place your npm project in a folder named `web` (by default, this can be changed)
 
