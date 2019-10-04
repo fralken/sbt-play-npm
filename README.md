@@ -2,8 +2,8 @@
 
 Integrate a Npm application with Play (version 2.6 or 2.7).
 
-A typical use case is to have a single page application (e.g. implemented with React) that calls a set of Rest api implemented in Play.
-During development you set up a Npm project for tha SPA, and a Play project for the Rest api, being careful to proxy the Play server behind the Node server to avoid any CORS issue.
+A typical use case is to have a single page application (e.g. implemented with React) that calls a set of Rest apis implemented in Play.
+During development you set up a Npm project for the SPA, and a Play project for the Rest api, being careful to proxy the Play server behind the Node server to avoid any CORS issue.
 
 At runtime the SPA is served by an http server (e.g. Nginx) which again should proxy the Play server for the same reason.
 
